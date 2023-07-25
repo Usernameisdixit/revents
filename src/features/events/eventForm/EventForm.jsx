@@ -86,3 +86,5 @@ const EventForm = ({ setFormOpen, setEvents, createEvent, selectedEvent, updateE
 }
 
 export default EventForm
+
+// testing
