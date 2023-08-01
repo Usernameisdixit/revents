@@ -11,9 +11,13 @@ const HomePage=({setIsNavBarVisible})=>
     const navigate=useNavigate()
     const handleNavigate=()=>
     {
-        setIsNavBarVisible(true)    
+      console.log('Get started button clicked')    
     navigate("/events")
+    setIsNavBarVisible(true)
+       
     }
+
+    
 
     return(
         <div>

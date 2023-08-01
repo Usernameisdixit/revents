@@ -9,7 +9,7 @@ const EventDashboard = ({ formOpen, setFormOpen, selectEvent, selectedEvent }) =
     const [events, setEvents] = useState(sampleData)
 
 
-    console.log(typeof events)
+    // console.log(typeof events)
 
     const handleCreateEvent = (event) => {
         setEvents([...events, event])
@@ -17,7 +17,7 @@ const EventDashboard = ({ formOpen, setFormOpen, selectEvent, selectedEvent }) =
 
 
     const handleUpdateEvent = (updatedEvent) => {
-        setEvents(events.map(evt => evt.id == updatedEvent.id ? updatedEvent : evt))
+        setEvents(events.map(evt => evt.id === updatedEvent.id ? updatedEvent : evt))
         selectEvent(null)
         // setFormOpen(false)
     }
