@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Form, Header, Input, Segment } from "semantic-ui-react";
 import { useState } from "react";
 import cuid from "cuid";
+import { Link } from "react-router-dom";
 
 
 const EventForm = ({ setFormOpen, setEvents, createEvent, selectedEvent, updateEvent }) => {
@@ -75,7 +76,8 @@ const EventForm = ({ setFormOpen, setEvents, createEvent, selectedEvent, updateE
                 </Form.Field>
 
                 <Button type="submit" floated="right" positive content='Submit' />
-                <Button onClick={() => setFormOpen(false)} type="submit" floated="right" content='Cancel' />
+                {/* <Button onClick={() => setFormOpen(false)} type="submit" floated="right" content='Cancel' /> */}
+                <Button as={Link} to='/events' type="submit" floated="right" content='Cancel' />
 
             </Form>
 

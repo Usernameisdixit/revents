@@ -7,7 +7,7 @@ const EventList=({events,selectEvent,deleteEvent})=>
 return(
     <div>
         {events.map(event=>(
-          <EventListItem event={event} key={event.id} selectEvent={selectEvent} deleteEvent={deleteEvent}/>  
+          <EventListItem event={event} key={event.id} selectEvent={selectEvent} deleteEvent={deleteEvent} / >  
         ))}
 
         {/* { events.map(event=>(
