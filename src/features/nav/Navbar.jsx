@@ -8,6 +8,9 @@ import SignedOutMenu from "./SignedOutMenu";
 const Navbar = ({setFormOpen}) => {
 
 
+    
+
+
     const[authenticated,setAuthenticated]=useState(false)
    
 
@@ -22,6 +25,7 @@ const Navbar = ({setFormOpen}) => {
                 </Menu.Item>
                 {/* name and content both work same */}
                 <Menu.Item as={NavLink} to='/events' name='Events' />
+                <Menu.Item as={NavLink} to='/sandbox' name='SandBox' />
                {authenticated && <Menu.Item as={NavLink} to='/createEvent'>
                     <Button 
                     // onClick={()=>setFormOpen(true)} 

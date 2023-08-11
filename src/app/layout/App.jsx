@@ -8,6 +8,7 @@ import { Route, Routes, useLocation} from "react-router-dom";
 import HomePage from "../../features/home/HomePage";
 import EventDetailedPage from "../../features/events/eventDetailed/EventDetailedPage";
 import EventForm from "../../features/events/eventForm/EventForm";
+import SandBox from "../../features/sandbox/SandBox";
 // import Cookies from "js-cookie";
 
 
@@ -135,6 +136,7 @@ const App = () => {
           <Route path="/events/:id" element={<EventDetailedPage isNavBarVisible={isNavBarVisible}/>} />
           <Route path="/createEvent" element={<EventForm />} />
           <Route path="/manage/:id" element={<EventForm />} />
+          <Route path="/sandbox" element={<SandBox setIsNavBarVisible={setIsNavBarVisible} />} />
 
         </Routes>
 
