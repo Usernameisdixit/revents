@@ -2,13 +2,16 @@ import React from "react";
 import { Grid } from "semantic-ui-react";
 import EventList from "./EventList";
 // import EventForm from "../eventForm/EventForm";
-import { sampleData } from "../../../app/api/sampleData";
-import { useState } from "react";
+//import { sampleData } from "../../../app/api/sampleData";
+//import { useState } from "react";
+import { useSelector } from "react-redux";
 
 // we have removed all props because they were for single page but not good for routing
 // const EventDashboard = ({ formOpen, setFormOpen, selectEvent, selectedEvent }) => {
 const EventDashboard = () => {
-    const [events, setEvents] = useState(sampleData)
+    // const [events, setEvents] = useState(sampleData) we commented it to use data from store
+
+    const {events}=useSelector(state=>state.event)
 
 
     // console.log(typeof events)
@@ -26,7 +29,7 @@ const EventDashboard = () => {
 
 
     const handleDeleteEvents = (eventId) => {
-        setEvents(events.filter(evt => evt.id !== eventId))
+        //setEvents(events.filter(evt => evt.id !== eventId))
     }
 
 
